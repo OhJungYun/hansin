@@ -15,6 +15,9 @@ public class example1 extends HttpServlet {
        @Override
     public void service(ServletRequest req, ServletResponse res) throws ServletException, IOException {
     	System.out.println("=====service=====");
+    	res.setContentType("text/html; charset=UTF-8");
+    	PrintWriter out = res.getWriter();
+    	out.print("<body><h1>IT콘텐츠학과</h1></body>");
     	super.service(req, res);
     	
     }
@@ -27,7 +30,7 @@ public class example1 extends HttpServlet {
 	   out.print("<head>");
 	   out.print("<title>example1</title>");
 	   out.print("</head>");
-	   out.print("<body><h1>IT콘텐츠학과 오정윤 201637005</h1></body>");
+	   out.print("<body><h1>오정윤</h1></body>");
 	   out.print("</html>");
    }
 }
